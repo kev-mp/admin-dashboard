@@ -1,9 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
-   
+    box-sizing: border-box; 
 }
 
 @font-face {
@@ -62,36 +60,30 @@ body {
     background-color: gainsboro;
 }
 
-#home {
-    background-image: url(./images/home.svg);
-}
-
-#profile {
-    background-image: url(./images/profile.svg);
+.sidebar-content {
+    margin-left: 12px;
 }
 
 .sidebar-content li {
-    padding: 8px;
+    padding: 8px 0px;
     font-size: 24px;
 }
 
-.sidebar-content:nth-child(2) {
-    margin-bottom: 72px;
-}
-
-.sidebar-content a {
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    padding-left: 36px;
-    text-decoration: none;
-
-    
+.sidebar-content:nth-of-type(1) {
+    margin-bottom: 36px;
 }
 
 a {
     text-decoration: none;
+}
+
+.sidebar a {
     color: white;
+
+    display:grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: 20px;
 }
 
 a:hover {
@@ -104,6 +96,7 @@ a:hover {
 }
 
 .sidebar-content img {
-    height: 20px;
-    width: 20px;
+    height: 32px;
+    width: 32px;
+    
 }
