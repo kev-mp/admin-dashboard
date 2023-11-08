@@ -1,6 +1,12 @@
+:root {
+    --dark-green: #14532d;
+    --light-blue: rgba(226,232,240,255);
+}
+
 * {
     margin: 0;
     padding: 0;
+    
     
 }
 
@@ -26,14 +32,15 @@ body {
     display: grid;
     
     grid-template-rows: max-content 1fr;
-    grid-template-columns: max-content minmax(600px, 1fr);
-    height: max(600px,100vh);
+    grid-template-columns: max-content 1fr;
+    height: max(800px,100vh);
+    
 }
 
 .sidebar {
     grid-row: 1/-1;
 
-    background-color: #14532d;
+    background-color: var(--dark-green);
     color:white;
 
     padding: 16px 32px 0 16px;
@@ -99,13 +106,14 @@ a:hover {
 .header {
     display: grid;
     grid-template-rows: max-content max-content;
-    gap: 20px;
+    
 
     
     box-shadow: 1px 0px 10px 0px rgb(184, 184, 184);
     z-index: 1;
     
     background-color: whitesmoke;
+    font-family: Roboto-Bold;
 }
 
 .header .top {
@@ -154,12 +162,11 @@ img.profile {
 }
 
 .top p {
-    font-family: Roboto-Bold;
     font-size: 20px;
 }
 
 #search-bar {
-    background-color: rgba(226,232,240,255);
+    background-color: var(--light-blue);
     border: 0;
     border-radius: 24px;
     font-size: 16px;
@@ -167,8 +174,67 @@ img.profile {
     padding: 12px 20px;
 }
 
+.header .bottom {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    
+}
 
+.status {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.namespace {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 8px;
+}
+
+.namespace p.name {
+    font-size: 24px;
+}
+
+.bottom img.profile {
+    height: 128px;
+    width: 128px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 40px;
+}
+
+.buttons button {
+    background-color: var(--dark-green);
+    color: white;
+    font-size: 20px;
+    font-family: Roboto-Bold;
+    border-radius: 50px;
+    border: none;
+
+    width: 120px;
+    height: 60px;
+}
+
+.buttons button:hover {
+    background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+    cursor: pointer;
+}
 
 .main-content {
-    background-color: rgba(226,232,240,255);
+    background-color: var(--light-blue);
 }
